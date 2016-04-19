@@ -18,6 +18,10 @@
 // this is translation of android_native_app_glue.c
 module android_native_app_glue_impl;
 
+version(Android):
+extern(C):
+@system:
+
 import core.sys.posix.pthread;
 import android.input, android.native_window, android.rect, android.log;
 import android.configuration, android.looper, android.native_activity;
